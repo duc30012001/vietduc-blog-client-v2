@@ -1,0 +1,17 @@
+{
+    "metadata": {
+        "title": "VietDuc Blog",
+        "description": "A blog about technology, programming, and life"
+    },
+    "home": {
+        "title": "Welcome to VietDuc Blog",
+        "description": "Explore the latest articles about technology, programming, and life."
+    },
+    "common": {
+        "readMore": "Read more",
+        "backToHome": "Back to home",
+        "loading": "Loading...",
+        "error": "Something went wrong",
+        "notFound": "Page not found"
+    }
+}

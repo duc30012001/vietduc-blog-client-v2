@@ -26,11 +26,7 @@
         // OUTPUT
         // =========================================================================
         "target": "ES2022",
-        "lib": [
-            "ES2022",
-            "DOM",
-            "DOM.Iterable"
-        ],
+        "lib": ["ES2022", "DOM", "DOM.Iterable"],
         "declaration": true,
         "declarationMap": true,
         "sourceMap": true,
@@ -44,21 +40,11 @@
         // =========================================================================
         "baseUrl": ".",
         "paths": {
-            "@/*": [
-                "./src/*"
-            ],
-            "@/components/*": [
-                "./src/components/*"
-            ],
-            "@/lib/*": [
-                "./src/lib/*"
-            ],
-            "@/types/*": [
-                "./src/types/*"
-            ],
-            "@/utils/*": [
-                "./src/utils/*"
-            ]
+            "@/*": ["./src/*"],
+            "@/components/*": ["./src/components/*"],
+            "@/lib/*": ["./src/lib/*"],
+            "@/types/*": ["./src/types/*"],
+            "@/utils/*": ["./src/utils/*"]
         },
         // =========================================================================
         // JSX (for React projects)
@@ -67,7 +53,7 @@
         // =========================================================================
         // EMIT
         // =========================================================================
-        "noEmit": true, // Let bundler handle emit
+        "noEmit": true // Let bundler handle emit
         // "outDir": "./dist",
         // "rootDir": "./src",
         // =========================================================================
@@ -76,11 +62,7 @@
         // "experimentalDecorators": true,
         // "emitDecoratorMetadata": true
     },
-    "include": [
-        "src/**/*.ts",
-        "src/**/*.tsx",
-        "src/**/*.d.ts"
-    ],
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"],
     "exclude": [
         "node_modules",
         "dist",

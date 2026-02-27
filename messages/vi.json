@@ -1,0 +1,17 @@
+{
+    "metadata": {
+        "title": "VietDuc Blog",
+        "description": "Blog về công nghệ, lập trình và cuộc sống"
+    },
+    "home": {
+        "title": "Chào mừng đến với VietDuc Blog",
+        "description": "Khám phá các bài viết mới nhất về công nghệ, lập trình và cuộc sống."
+    },
+    "common": {
+        "readMore": "Đọc thêm",
+        "backToHome": "Về trang chủ",
+        "loading": "Đang tải...",
+        "error": "Đã xảy ra lỗi",
+        "notFound": "Không tìm thấy trang"
+    }
+}
