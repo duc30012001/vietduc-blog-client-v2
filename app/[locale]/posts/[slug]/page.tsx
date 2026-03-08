@@ -150,7 +150,7 @@ function TagList({
                         key={tag.slug}
                         href={routes.tag(tag.slug)}
                         className={cn(
-                            'bg-surface border-border rounded-full border px-3 py-1.5 text-xs font-medium',
+                            'bg-surface border-border w-fit rounded-full border px-3 py-1.5 text-xs font-medium',
                             'text-text-secondary hover:border-accent hover:text-accent transition-colors',
                         )}
                     >
