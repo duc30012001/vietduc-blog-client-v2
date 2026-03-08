@@ -57,7 +57,7 @@
     --color-footer-text: var(--footer-text);
     --color-footer-heading: var(--footer-heading);
     --color-footer-border: var(--footer-border);
-    --font-sans: var(--font-geist-sans);
+    --font-sans: 'Google Sans', system-ui, sans-serif;
     --font-mono: var(--font-geist-mono);
 }
 
@@ -90,7 +90,7 @@
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    font-family: 'Google Sans', system-ui, sans-serif;
 }
 
 /* Smooth scrolling */

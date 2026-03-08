@@ -64,33 +64,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // ==================== Helper Components ====================
 
-function BackButton({ label }: { label: string }) {
-    return (
-        <Link
-            href={routes.home()}
-            className={cn(
-                'text-text-secondary mb-8 inline-flex items-center gap-2 text-sm font-medium transition-colors',
-                'hover:text-accent',
-            )}
-        >
-            <svg
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-            >
-                <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                />
-            </svg>
-            {label}
-        </Link>
-    );
-}
-
 function PostMeta({
     categoryName,
     categorySlug,
@@ -222,9 +195,6 @@ export default async function PostDetailPage({ params }: Props) {
 
     return (
         <article>
-            {/* Back button */}
-            <BackButton label={t('backToPosts')} />
-
             {/* Hero Thumbnail */}
             {post.thumbnail && (
                 <div className="relative mb-8 aspect-21/9 overflow-hidden rounded-2xl">
