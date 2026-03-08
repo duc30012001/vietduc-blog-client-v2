@@ -13,5 +13,16 @@
         "loading": "Đang tải...",
         "error": "Đã xảy ra lỗi",
         "notFound": "Không tìm thấy trang"
+    },
+    "header": {
+        "searchPlaceholder": "Tìm kiếm bài viết...",
+        "menu": "Menu",
+        "closeMenu": "Đóng menu",
+        "home": "Trang chủ"
+    },
+    "footer": {
+        "getInTouch": "Liên hệ",
+        "followMe": "Theo dõi",
+        "copyright": "© {year} {name}. All rights reserved."
     }
 }

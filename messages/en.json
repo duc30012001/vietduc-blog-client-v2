@@ -13,5 +13,16 @@
         "loading": "Loading...",
         "error": "Something went wrong",
         "notFound": "Page not found"
+    },
+    "header": {
+        "searchPlaceholder": "Search articles...",
+        "menu": "Menu",
+        "closeMenu": "Close menu",
+        "home": "Home"
+    },
+    "footer": {
+        "getInTouch": "Get in touch",
+        "followMe": "Follow me",
+        "copyright": "© {year} {name}. All rights reserved."
     }
 }

@@ -1,26 +1,99 @@
 @import 'tailwindcss';
 
 :root {
+    /* Brand colors */
+    --accent: #6366f1;
+    --accent-hover: #4f46e5;
+    --accent-light: #818cf8;
+
+    /* Surfaces */
     --background: #ffffff;
     --foreground: #171717;
+    --surface: #f8fafc;
+    --surface-hover: #f1f5f9;
+    --border: #e2e8f0;
+    --border-light: #f1f5f9;
+
+    /* Text */
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+
+    /* Header & Footer */
+    --header-bg: rgba(255, 255, 255, 0.85);
+    --header-border: #e2e8f0;
+    --footer-bg: #0f172a;
+    --footer-text: #cbd5e1;
+    --footer-heading: #f1f5f9;
+    --footer-border: #1e293b;
+
+    /* Layout */
+    --header-height: 64px;
+    --max-width: 1200px;
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+    --transition-slow: 350ms ease;
 }
 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
+    --color-accent: var(--accent);
+    --color-accent-hover: var(--accent-hover);
+    --color-accent-light: var(--accent-light);
+    --color-surface: var(--surface);
+    --color-surface-hover: var(--surface-hover);
+    --color-border: var(--border);
+    --color-border-light: var(--border-light);
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-text-muted: var(--text-muted);
+    --color-header-bg: var(--header-bg);
+    --color-header-border: var(--header-border);
+    --color-footer-bg: var(--footer-bg);
+    --color-footer-text: var(--footer-text);
+    --color-footer-heading: var(--footer-heading);
+    --color-footer-border: var(--footer-border);
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
+        --accent: #818cf8;
+        --accent-hover: #6366f1;
+        --accent-light: #a5b4fc;
+
         --background: #0a0a0a;
         --foreground: #ededed;
+        --surface: #1a1a2e;
+        --surface-hover: #252542;
+        --border: #2a2a3e;
+        --border-light: #1e1e32;
+
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
+
+        --header-bg: rgba(10, 10, 10, 0.85);
+        --header-border: #1e293b;
+        --footer-bg: #050510;
+        --footer-text: #94a3b8;
+        --footer-heading: #e2e8f0;
+        --footer-border: #1e293b;
     }
 }
 
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
 }
