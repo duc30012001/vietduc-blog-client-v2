@@ -47,7 +47,8 @@
         "searchPlaceholder": "Tìm kiếm bài viết...",
         "menu": "Menu",
         "closeMenu": "Đóng menu",
-        "home": "Trang chủ"
+        "home": "Trang chủ",
+        "about": "Giới thiệu"
     },
     "footer": {
         "getInTouch": "Liên hệ",

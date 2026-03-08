@@ -18,4 +18,7 @@ export const routes = {
     // Tags
     tag: (slug: string) => `/tags/${slug}`,
     tagPosts: (slug: string) => `/tags/${slug}/posts`,
+
+    // Pages
+    about: () => '/about',
 } as const;

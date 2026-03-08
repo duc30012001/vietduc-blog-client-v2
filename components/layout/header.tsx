@@ -383,6 +383,20 @@ function MobileMenu({
                         categories={categories}
                         locale={locale}
                     />
+
+                    {/* About link */}
+                    <div className="border-border mt-3 border-t pt-3">
+                        <Link
+                            href={routes.about()}
+                            className={cn(
+                                'text-text-secondary block rounded-md px-3 py-2 font-medium transition-colors',
+                                'hover:bg-surface-hover hover:text-accent',
+                            )}
+                            onClick={onClose}
+                        >
+                            {t('about')}
+                        </Link>
+                    </div>
                 </nav>
             </div>
         </>
@@ -529,6 +543,17 @@ export function Header({ brand, categories }: HeaderProps) {
                                 locale={locale}
                             />
                         ))}
+                        <Link
+                            href={routes.about()}
+                            className={cn(
+                                'text-text-secondary relative px-3 py-2 font-medium transition-colors',
+                                'hover:text-accent',
+                                'after:bg-accent after:absolute after:bottom-0 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:rounded-full after:transition-all',
+                                'hover:after:w-full',
+                            )}
+                        >
+                            {t('about')}
+                        </Link>
                     </nav>
 
                     {/* Right: Search, Locale, Mobile Menu */}
