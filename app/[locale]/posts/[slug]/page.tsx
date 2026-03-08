@@ -236,7 +236,7 @@ export default async function PostDetailPage({ params }: Props) {
                 <div className="order-1 min-w-0 lg:order-2">
                     <MarkdownRenderer
                         content={content}
-                        className="prose-lg max-w-none"
+                        className="prose max-w-none"
                     />
                 </div>
 
