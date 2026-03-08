@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
+import { ThemeToggle } from '@/components/theme-toggle';
 import { routes } from '@/libs/routes';
 import { cn, getLocalizedValue } from '@/libs/utils';
 
@@ -559,6 +560,7 @@ export function Header({ brand, categories }: HeaderProps) {
                     {/* Right: Search, Locale, Mobile Menu */}
                     <div className="flex items-center gap-1">
                         <SearchButton placeholder={t('searchPlaceholder')} />
+                        <ThemeToggle />
                         <LocaleSwitcher />
 
                         {/* Mobile hamburger */}

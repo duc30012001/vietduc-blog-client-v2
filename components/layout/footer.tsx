@@ -25,7 +25,7 @@ export function Footer({ brand, socials }: FooterProps) {
     const enabledSocials = socials.filter((s) => s.enabled);
 
     return (
-        <footer className="border-t border-slate-200 bg-slate-50 text-slate-600">
+        <footer className="border-footer-border bg-footer-bg text-footer-text border-t">
             <div className="mx-auto max-w-(--max-width) px-4 py-12 sm:px-6 lg:py-16">
                 <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
                     {/* Brand Column */}
@@ -47,13 +47,13 @@ export function Footer({ brand, socials }: FooterProps) {
                                     {brand.title.charAt(0)}
                                 </div>
                             )}
-                            <span className="text-lg font-semibold text-slate-900">
+                            <span className="text-footer-heading text-lg font-semibold">
                                 {brand.title}
                             </span>
                         </Link>
 
                         {shortIntro && (
-                            <p className="mt-4 max-w-sm leading-relaxed text-slate-500">
+                            <p className="text-footer-text mt-4 max-w-sm leading-relaxed">
                                 {shortIntro}
                             </p>
                         )}
@@ -61,7 +61,7 @@ export function Footer({ brand, socials }: FooterProps) {
 
                     {/* Get In Touch Column */}
                     <div>
-                        <h3 className="mb-4 font-semibold tracking-wider text-slate-800 uppercase">
+                        <h3 className="text-footer-heading mb-4 font-semibold tracking-wider uppercase">
                             {t('getInTouch')}
                         </h3>
 
@@ -69,7 +69,7 @@ export function Footer({ brand, socials }: FooterProps) {
                             <a
                                 href={`mailto:${brand.contactEmail}`}
                                 className={cn(
-                                    'inline-flex items-center gap-2 text-slate-500 transition-colors',
+                                    'text-footer-text inline-flex items-center gap-2 transition-colors',
                                     'hover:text-accent',
                                 )}
                             >
@@ -94,7 +94,7 @@ export function Footer({ brand, socials }: FooterProps) {
                     {/* Follow Me Column */}
                     {enabledSocials.length > 0 && (
                         <div>
-                            <h3 className="mb-4 font-semibold tracking-wider text-slate-800 uppercase">
+                            <h3 className="text-footer-heading mb-4 font-semibold tracking-wider uppercase">
                                 {t('followMe')}
                             </h3>
 
@@ -107,7 +107,7 @@ export function Footer({ brand, socials }: FooterProps) {
                                         rel="noopener noreferrer"
                                         title={social.name}
                                         className={cn(
-                                            'flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-500 transition-all',
+                                            'border-footer-border text-footer-text flex h-10 w-10 items-center justify-center rounded-lg border transition-all',
                                             'hover:border-accent/40 hover:bg-accent/10 hover:text-accent hover:scale-110',
                                         )}
                                     >
@@ -135,9 +135,9 @@ export function Footer({ brand, socials }: FooterProps) {
             </div>
 
             {/* Copyright Bar */}
-            <div className="border-t border-slate-200">
+            <div className="border-footer-border border-t">
                 <div className="mx-auto max-w-(--max-width) px-4 py-5 sm:px-6">
-                    <p className="text-center text-sm text-slate-400">
+                    <p className="text-text-muted text-center text-sm">
                         {t('copyright', {
                             year: currentYear,
                             name: brand.title,

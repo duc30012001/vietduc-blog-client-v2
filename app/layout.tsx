@@ -4,6 +4,8 @@ import { Geist_Mono } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 
 import { NuqsProvider } from '@/components/nuqs-provider';
+import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeScript } from '@/components/theme-script';
 import { SITE_NAME } from '@/libs/constants';
 
 import './globals.css';
@@ -33,10 +35,13 @@ export default function RootLayout({
                     href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700;800;900&display=swap"
                     rel="stylesheet"
                 />
+                <ThemeScript />
             </head>
             <body className={`${geistMono.variable} antialiased`}>
                 <NextTopLoader showSpinner={false} />
-                <NuqsProvider>{children}</NuqsProvider>
+                <ThemeProvider>
+                    <NuqsProvider>{children}</NuqsProvider>
+                </ThemeProvider>
             </body>
 
             {process.env.NEXT_PUBLIC_GA_ID && (
