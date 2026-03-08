@@ -36,6 +36,14 @@
         "notFound": "Không tìm thấy thẻ",
         "noPosts": "Chưa có bài viết nào với thẻ này."
     },
+    "search": {
+        "title": "Kết quả tìm kiếm",
+        "titleWithQuery": "Kết quả cho \"{query}\"",
+        "placeholder": "Tìm kiếm bài viết...",
+        "noResults": "Không tìm thấy kết quả cho \"{query}\".",
+        "noQuery": "Nhập từ khóa để tìm kiếm bài viết.",
+        "resultCount": "Tìm thấy {count} kết quả"
+    },
     "common": {
         "readMore": "Đọc thêm",
         "backToHome": "Về trang chủ",

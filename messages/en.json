@@ -36,6 +36,14 @@
         "notFound": "Tag not found",
         "noPosts": "No posts with this tag yet."
     },
+    "search": {
+        "title": "Search Results",
+        "titleWithQuery": "Results for \"{query}\"",
+        "placeholder": "Search articles...",
+        "noResults": "No results found for \"{query}\".",
+        "noQuery": "Enter a keyword to search articles.",
+        "resultCount": "{count} results found"
+    },
     "common": {
         "readMore": "Read more",
         "backToHome": "Back to home",
