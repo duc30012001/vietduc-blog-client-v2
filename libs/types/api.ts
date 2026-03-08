@@ -84,3 +84,16 @@ export interface PaginatedResponse<T> {
     data: T[];
     meta: PaginationMeta;
 }
+
+// ==================== Sitemap ====================
+
+export interface SitemapItem {
+    slug: string;
+    updated_at: string;
+}
+
+export interface SitemapData {
+    posts: SitemapItem[];
+    categories: SitemapItem[];
+    tags: SitemapItem[];
+}

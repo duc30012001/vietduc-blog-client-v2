@@ -3,6 +3,7 @@ import type {
     PaginatedResponse,
     Post,
     SiteSettings,
+    SitemapData,
 } from '@/libs/types/api';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/v1';
@@ -132,5 +133,17 @@ export async function getRelatedPosts(slug: string): Promise<Post[]> {
     } catch (error) {
         console.error('[API] Failed to fetch related posts:', error);
         return [];
+    }
+}
+
+export async function getSitemapData(): Promise<SitemapData> {
+    try {
+        return await fetchApi<SitemapData>('/public/sitemap-data', [
+            'posts',
+            'categories',
+        ]);
+    } catch (error) {
+        console.error('[API] Failed to fetch sitemap data:', error);
+        return { posts: [], categories: [], tags: [] };
     }
 }
