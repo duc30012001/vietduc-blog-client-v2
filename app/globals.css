@@ -3,9 +3,9 @@
 
 :root {
     /* Brand colors */
-    --accent: #6366f1;
-    --accent-hover: #4f46e5;
-    --accent-light: #818cf8;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --accent-light: #60a5fa;
 
     /* Surfaces */
     --background: #ffffff;
@@ -63,9 +63,9 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --accent: #818cf8;
-        --accent-hover: #6366f1;
-        --accent-light: #a5b4fc;
+        --accent: #60a5fa;
+        --accent-hover: #3b82f6;
+        --accent-light: #93c5fd;
 
         --background: #0a0a0a;
         --foreground: #ededed;
