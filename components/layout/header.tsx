@@ -515,7 +515,7 @@ export function Header({ brand, categories }: HeaderProps) {
                                 {brand.title.charAt(0)}
                             </div>
                         )}
-                        <span className="text-text-primary hidden text-base font-semibold sm:block">
+                        <span className="text-text-primary hidden text-lg font-semibold sm:block">
                             {brand.title}
                         </span>
                     </Link>

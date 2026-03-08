@@ -1,4 +1,9 @@
-import type { Category, SiteSettings } from '@/libs/types/api';
+import type {
+    Category,
+    PaginatedResponse,
+    Post,
+    SiteSettings,
+} from '@/libs/types/api';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080/v1';
 
@@ -52,5 +57,48 @@ export async function getCategories(): Promise<Category[]> {
     } catch (error) {
         console.error('[API] Failed to fetch categories:', error);
         return [];
+    }
+}
+
+export async function getPosts(
+    params: { page?: number; limit?: number } = {},
+): Promise<PaginatedResponse<Post>> {
+    const { page = 1, limit = 9 } = params;
+    const query = new URLSearchParams({
+        page: String(page),
+        limit: String(limit),
+    });
+
+    try {
+        return await fetchApi<PaginatedResponse<Post>>(
+            `/public/posts?${query.toString()}`,
+            ['posts'],
+        );
+    } catch (error) {
+        console.error('[API] Failed to fetch posts:', error);
+        return {
+            data: [],
+            meta: {
+                total: 0,
+                page,
+                limit,
+                totalPages: 0,
+                hasNextPage: false,
+                hasPreviousPage: false,
+            },
+        };
+    }
+}
+
+export async function getFeaturedPost(): Promise<Post | null> {
+    try {
+        const response = await fetchApi<PaginatedResponse<Post>>(
+            '/public/posts?page=1&limit=1',
+            ['posts'],
+        );
+        return response.data[0] ?? null;
+    } catch (error) {
+        console.error('[API] Failed to fetch featured post:', error);
+        return null;
     }
 }

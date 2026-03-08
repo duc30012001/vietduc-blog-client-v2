@@ -5,7 +5,14 @@
     },
     "home": {
         "title": "Welcome to VietDuc Blog",
-        "description": "Explore the latest articles about technology, programming, and life."
+        "description": "Explore the latest articles about technology, programming, and life.",
+        "featuredPost": "Featured Post",
+        "recentStories": "Recent Stories",
+        "readMore": "Read More",
+        "noPosts": "No posts available yet.",
+        "previous": "Previous",
+        "next": "Next",
+        "pageOf": "Page {current} of {total}"
     },
     "common": {
         "readMore": "Read more",
