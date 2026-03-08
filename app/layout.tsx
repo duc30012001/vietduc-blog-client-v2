@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 
 import { NuqsProvider } from '@/components/nuqs-provider';
+import { SITE_NAME } from '@/libs/constants';
 
 import './globals.css';
 
@@ -18,7 +19,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: 'VietDuc Blog',
+    title: {
+        default: SITE_NAME,
+        template: `%s | ${SITE_NAME}`,
+    },
     description: 'A blog about technology, programming, and life',
 };
 
