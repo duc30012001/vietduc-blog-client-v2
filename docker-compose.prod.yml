@@ -1,0 +1,24 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: vietduc-blog-client:${COMMIT_SHA:-latest}
+        container_name: vietduc-blog-client-prod
+        ports:
+            - '${APP_PORT:-3000}:3000'
+        env_file:
+            - .env
+        environment:
+            - NODE_ENV=production
+        deploy:
+            resources:
+                limits:
+                    memory: ${DOCKER_MEMORY_LIMIT:-512m}
+                    cpus: '${DOCKER_CPU_LIMIT:-1.0}'
+        restart: unless-stopped
+        logging:
+            driver: json-file
+            options:
+                max-size: '10m'
+                max-file: '3'

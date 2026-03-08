@@ -1,0 +1,38 @@
+# Dependencies
+node_modules
+
+# Build output
+.next
+out
+build
+
+# Version control
+.git
+.gitattributes
+
+# Environment files
+# NOTE: .env is NOT excluded because Next.js needs NEXT_PUBLIC_* at build time
+.env.*
+!.env
+!.env.example
+
+# IDE / Editor
+.vscode
+.history
+.temp
+
+# Agent config
+.agent
+
+# Documentation
+docs
+*.md
+!README.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker files (no recursion)
+Dockerfile
+docker-compose*.yml
