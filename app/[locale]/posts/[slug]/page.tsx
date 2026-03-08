@@ -144,13 +144,13 @@ function TagList({
             <h3 className="text-text-secondary mb-3 text-sm font-semibold">
                 {label}
             </h3>
-            <div className="flex flex-wrap gap-2 lg:flex-col">
+            <div className="flex flex-wrap gap-2">
                 {tags.map((tag) => (
                     <Link
                         key={tag.slug}
                         href={routes.tag(tag.slug)}
                         className={cn(
-                            'bg-surface border-border w-fit rounded-full border px-3 py-1.5 text-xs font-medium',
+                            'bg-surface border-border rounded-full border px-3 py-1.5 text-xs font-medium',
                             'text-text-secondary hover:border-accent hover:text-accent transition-colors',
                         )}
                     >
@@ -224,7 +224,7 @@ export default async function PostDetailPage({ params }: Props) {
             </header>
 
             {/* 3-Column Layout: Share | Content | Tags */}
-            <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-[60px_1fr_200px]">
+            <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-[60px_1fr_250px]">
                 {/* Left: Share Sidebar (sticky on desktop, inline on mobile) */}
                 <aside className="order-3 lg:order-1">
                     <div className="flex gap-3 lg:sticky lg:top-24 lg:flex-col lg:items-center lg:gap-3">
