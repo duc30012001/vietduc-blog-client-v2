@@ -31,6 +31,7 @@ jobs:
                       cd ${{ env.PROJECT_PATH }}
 
                       echo "📥 Pulling latest code..."
+                      git config --global --add safe.directory ${{ env.PROJECT_PATH }}
                       git fetch origin main
                       git reset --hard origin/main
 
