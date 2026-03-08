@@ -14,6 +14,18 @@
         "next": "Tiếp",
         "pageOf": "Trang {current} / {total}"
     },
+    "post": {
+        "views": "{count} lượt xem",
+        "publishedAt": "Đăng ngày {date}",
+        "relatedPosts": "Bài viết liên quan",
+        "backToPosts": "Quay lại bài viết",
+        "tags": "Tags",
+        "share": "Chia sẻ",
+        "copyLink": "Sao chép liên kết",
+        "linkCopied": "Đã sao chép!",
+        "notFound": "Không tìm thấy bài viết",
+        "notFoundDescription": "Bài viết bạn tìm kiếm không tồn tại hoặc đã bị xoá."
+    },
     "common": {
         "readMore": "Đọc thêm",
         "backToHome": "Về trang chủ",

@@ -102,3 +102,26 @@ export async function getFeaturedPost(): Promise<Post | null> {
         return null;
     }
 }
+
+export async function getPostBySlug(slug: string): Promise<Post | null> {
+    try {
+        return await fetchApi<Post>(`/public/posts/${slug}`, [
+            'posts',
+            `post-${slug}`,
+        ]);
+    } catch (error) {
+        console.error('[API] Failed to fetch post:', error);
+        return null;
+    }
+}
+
+export async function getRelatedPosts(slug: string): Promise<Post[]> {
+    try {
+        return await fetchApi<Post[]>(`/public/posts/${slug}/related`, [
+            'posts',
+        ]);
+    } catch (error) {
+        console.error('[API] Failed to fetch related posts:', error);
+        return [];
+    }
+}
