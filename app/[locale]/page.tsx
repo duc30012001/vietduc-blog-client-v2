@@ -45,11 +45,11 @@ export default async function HomePage({ params, searchParams }: Props) {
                 />
             )}
 
-            {/* Recent Stories Section */}
+            {/* Recent Posts Section */}
             <section>
                 <h2 className="text-text-primary mb-8 flex items-center text-2xl font-bold">
                     <span className="bg-accent mr-3 h-1 w-8 rounded-full" />
-                    {t('recentStories')}
+                    {t('recentPosts')}
                 </h2>
 
                 {postsResponse.data.length > 0 ? (
