@@ -61,13 +61,20 @@ export async function getCategories(): Promise<Category[]> {
 }
 
 export async function getPosts(
-    params: { page?: number; limit?: number } = {},
+    params: {
+        page?: number;
+        limit?: number;
+        category_slug?: string;
+        tag_slug?: string;
+    } = {},
 ): Promise<PaginatedResponse<Post>> {
-    const { page = 1, limit = 9 } = params;
+    const { page = 1, limit = 9, category_slug, tag_slug } = params;
     const query = new URLSearchParams({
         page: String(page),
         limit: String(limit),
     });
+    if (category_slug) query.set('category_slug', category_slug);
+    if (tag_slug) query.set('tag_slug', tag_slug);
 
     try {
         return await fetchApi<PaginatedResponse<Post>>(

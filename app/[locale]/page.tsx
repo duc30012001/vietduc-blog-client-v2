@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
+import { EmptyState } from '@/components/empty-state';
 import { FeaturedPost } from '@/components/home/featured-post';
 import { Pagination } from '@/components/home/pagination';
 import { PostCard } from '@/components/home/post-card';
@@ -71,9 +72,7 @@ export default async function HomePage({ params, searchParams }: Props) {
                         />
                     </>
                 ) : (
-                    <p className="text-text-muted py-12 text-center">
-                        {t('noPosts')}
-                    </p>
+                    <EmptyState title={t('noPosts')} />
                 )}
             </section>
         </>

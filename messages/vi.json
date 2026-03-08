@@ -26,6 +26,16 @@
         "notFound": "Không tìm thấy bài viết",
         "notFoundDescription": "Bài viết bạn tìm kiếm không tồn tại hoặc đã bị xoá."
     },
+    "category": {
+        "title": "Danh mục: {name}",
+        "notFound": "Không tìm thấy danh mục",
+        "noPosts": "Chưa có bài viết nào trong danh mục này."
+    },
+    "tag": {
+        "title": "Thẻ: {name}",
+        "notFound": "Không tìm thấy thẻ",
+        "noPosts": "Chưa có bài viết nào với thẻ này."
+    },
     "common": {
         "readMore": "Đọc thêm",
         "backToHome": "Về trang chủ",
